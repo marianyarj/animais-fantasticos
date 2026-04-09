@@ -20,4 +20,3 @@ dist-ssr
 *.sw?
 
 main.js.LICENSE.txt
-package-lock.json
