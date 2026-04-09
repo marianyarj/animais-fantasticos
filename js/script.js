@@ -1,6 +1,6 @@
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initTabNav from "./modules/tabnav.js";
-import initAccordionFaq from "./modules/accordion-faq.js";
+import AccordionFaq from "./modules/accordion-faq.js";
 import initModal from "./modules/modal.js";
 import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
@@ -14,7 +14,9 @@ import ScrollSmooth from "./modules/scroll-smooth.js";
 const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
 scrollSmooth.init();
 
-initAccordionFaq();
+const accordionFaq = new AccordionFaq('[data-anime="accordion"] dt');
+accordionFaq.init();
+
 initTabNav();
 initScrollAnimation();
 initModal();
