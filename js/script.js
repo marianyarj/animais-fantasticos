@@ -1,0 +1,21 @@
+import initScrollSmooth from "./modules/scroll-smooth.js";
+import initScrollAnimation from "./modules/scroll-animation.js";
+import initTabNav from "./modules/tabnav.js";
+import initAccordionFaq from "./modules/accordion-faq.js";
+import initModal from "./modules/modal.js";
+import initTooltip from "./modules/tooltip.js";
+import initDropDownMenu from "./modules/dropdown-menu.js";
+import initMenuMobile from "./modules/menu-mobile.js";
+import initOperatingHours from "./modules/operating-hours.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
+
+initAccordionFaq();
+initTabNav();
+initScrollSmooth();
+initScrollAnimation();
+initModal();
+initTooltip();
+initDropDownMenu();
+initMenuMobile();
+initOperatingHours();
+initFetchAnimais();
