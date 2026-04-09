@@ -1,4 +1,3 @@
-import initScrollSmooth from "./modules/scroll-smooth.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initTabNav from "./modules/tabnav.js";
 import initAccordionFaq from "./modules/accordion-faq.js";
@@ -8,10 +7,15 @@ import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initOperatingHours from "./modules/operating-hours.js";
 import initFetchAnimais from "./modules/fetch-animais.js";
+import ScrollSmooth from "./modules/scroll-smooth.js";
+
+//const options = { behavior: 'smooth', block: 'start' };
+//const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]', options);
+const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
+scrollSmooth.init();
 
 initAccordionFaq();
 initTabNav();
-initScrollSmooth();
 initScrollAnimation();
 initModal();
 initTooltip();
