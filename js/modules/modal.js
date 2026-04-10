@@ -1,42 +1,38 @@
-const initModal = () => {
+export default class Modal {
+    constructor(btnOpen, btnClose, containerModal) {
+        this.btnOpen = document.querySelector(btnOpen);
+        this.btnClose = document.querySelector(btnClose);
+        this.containerModal = document.querySelector(containerModal);
 
-    const abrirBtn = document.querySelector('[data-modal="abrir"]');
-    const closeBtn = document.querySelector('[data-modal="close"]');
-    const containerModal = document.querySelector('[data-modal="container"]');
-
-    if (abrirBtn && closeBtn && containerModal) {
-
-        const toggleModal = (event) => {
-            event.preventDefault();
-            containerModal.classList.toggle("active");
-        };
-
-        // const abrirModal = (event) => {
-        //     event.preventDefault();
-        //     containerModal.classList.add("active");
-        // }
-
-        // const closeModal = (event) => {
-        //     event.preventDefault();
-        //     containerModal.classList.remove("active");
-        // }
-
-        // para ter o this e usar como no exempplo dever ser uma funcao, com arrow nao funciona:
-        //     function clickModalOut(event) {
-        //     if (event.target === this) {
-        //         closeModal(event);
-        //     }
-        // }
-
-        const clickModalOut = (event) => {
-            if (event.target === containerModal) {
-                toggleModal(event);
-            }
-        };
-        abrirBtn.addEventListener('click', toggleModal);
-        closeBtn.addEventListener('click', toggleModal);
-        containerModal.addEventListener('click', clickModalOut);
+        this.eventToggleModal = this.eventToggleModal.bind(this);
+        this.clickModalOut = this.clickModalOut.bind(this);
     }
-};
 
-export default initModal;
+    toggleModal() {
+        this.containerModal.classList.toggle("active");
+    }
+
+    eventToggleModal(event) {
+        event.preventDefault();
+        this.toggleModal();
+    }
+
+    clickModalOut(event) {
+        if (event.target === this.containerModal) {
+            this.toggleModal(event);
+        }
+    }
+
+    addModalListener() {
+        this.btnOpen.addEventListener('click', this.eventToggleModal);
+        this.btnClose.addEventListener('click', this.eventToggleModal);
+        this.containerModal.addEventListener('click', this.clickModalOut);
+    }
+
+    init() {
+        if (this.btnOpen && this.btnClose && this.containerModal) {
+            this.addModalListener();
+        }
+        return this;
+    }
+}
