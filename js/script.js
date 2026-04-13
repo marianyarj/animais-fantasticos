@@ -2,7 +2,7 @@ import initScrollAnimation from "./modules/scroll-animation.js";
 import TabNav from "./modules/tabnav.js";
 import AccordionFaq from "./modules/accordion-faq.js";
 import Modal from "./modules/modal.js";
-import initTooltip from "./modules/tooltip.js";
+import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initOperatingHours from "./modules/operating-hours.js";
@@ -23,9 +23,12 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="close"]', '[data-modal="container"]');
 modal.init();
 
-initScrollAnimation();
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
 
-initTooltip();
+
+
+initScrollAnimation();
 initDropDownMenu();
 initMenuMobile();
 initOperatingHours();
