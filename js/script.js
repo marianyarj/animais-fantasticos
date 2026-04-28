@@ -6,7 +6,7 @@ import Tooltip from "./modules/tooltip.js";
 import initDropDownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initOperatingHours from "./modules/operating-hours.js";
-import initFetchAnimais from "./modules/fetch-animais.js";
+import fetchAnimals from "./modules/fetch-animals.js";
 import ScrollSmooth from "./modules/scroll-smooth.js";
 
 //const options = { behavior: 'smooth', block: 'start' };
@@ -32,4 +32,4 @@ initScrollAnimation();
 initDropDownMenu();
 initMenuMobile();
 initOperatingHours();
-initFetchAnimais();
+fetchAnimals('../../animaisapi.json', '.number-grid');
