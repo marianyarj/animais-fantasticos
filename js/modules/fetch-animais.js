@@ -1,4 +1,4 @@
-import initAnimanumber from "./number-animation.js";
+import AnimationNumbers from "./number-animation.js";
 
 const initFetchAnimais = () => {
 
@@ -13,7 +13,8 @@ const initFetchAnimais = () => {
                 numberGrid.appendChild(divNumeroAnimal);
             });
 
-            initAnimanumber();
+            const animationNumbers = new AnimationNumbers('[data-number]', '.numbers', 'active');
+            animationNumbers.init();
         } catch (error) {
             console.log("ERRO = " + error);
         }
