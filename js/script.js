@@ -1,4 +1,4 @@
-import initScrollAnimation from "./modules/scroll-animation.js";
+import ScrollAnimation from "./modules/scroll-animation.js";
 import TabNav from "./modules/tabnav.js";
 import AccordionFaq from "./modules/accordion-faq.js";
 import Modal from "./modules/modal.js";
@@ -26,9 +26,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
+const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]');
+scrollAnimation.init();
 
-
-initScrollAnimation();
 initDropDownMenu();
 initMenuMobile();
 initOperatingHours();
