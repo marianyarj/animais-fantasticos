@@ -4,7 +4,7 @@ import AccordionFaq from "./modules/accordion-faq.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
-import initMenuMobile from "./modules/menu-mobile.js";
+import MenuMobile from "./modules/menu-mobile.js";
 import initOperatingHours from "./modules/operating-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import ScrollSmooth from "./modules/scroll-smooth.js";
@@ -32,6 +32,7 @@ scrollAnimation.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="btnMobile"]', '[data-menu="list"]');
+menuMobile.init();
 initOperatingHours();
 fetchAnimals('../../animaisapi.json', '.number-grid');
