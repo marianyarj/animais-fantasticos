@@ -3,7 +3,7 @@ import TabNav from "./modules/tabnav.js";
 import AccordionFaq from "./modules/accordion-faq.js";
 import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
-import initDropDownMenu from "./modules/dropdown-menu.js";
+import DropdownMenu from "./modules/dropdown-menu.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initOperatingHours from "./modules/operating-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
@@ -29,7 +29,9 @@ tooltip.init();
 const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]');
 scrollAnimation.init();
 
-initDropDownMenu();
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
+dropdownMenu.init();
+
 initMenuMobile();
 initOperatingHours();
 fetchAnimals('../../animaisapi.json', '.number-grid');
