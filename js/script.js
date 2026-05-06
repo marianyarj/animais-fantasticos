@@ -36,4 +36,4 @@ menuMobile.init();
 const operatingHours = new OperatingHours('[data-semana]', "open");
 operatingHours.init();
 
-fetchAnimals('../../animaisapi.json', '.number-grid');
+fetchAnimals('./animaisapi.json', '.number-grid');
