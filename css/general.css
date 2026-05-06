@@ -314,7 +314,7 @@ body {
     }
 }
 
-[data-semana].aberto::after {
+[data-semana].open::after {
     display: inline-block;
     content: "";
     width: 10px;

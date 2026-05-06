@@ -1,25 +1,36 @@
-const initOperatingHours = () => {
-    const funcionamento = document.querySelector('[data-semana]');
-    const diasSemana = funcionamento.dataset.semana.split(",").map(Number);
-    const horarioSemana = funcionamento.dataset.horario.split(",").map(Number);
-    // console.log(diasSemana);
-    // console.log(horarioSemana);
+class OperatingHours {
+    constructor(businessHours, activeClass) {
+        this.businessHours = document.querySelector(businessHours);
+        this.activeClass = activeClass;
+    }
+    operatingInformation() {
+        this.weekdays = this.businessHours.dataset.semana.split(",").map(Number);
+        this.weekdayHours = this.businessHours.dataset.horario.split(",").map(Number);
+    }
+    currentStatus() {
+        this.currentDate = new Date();
+        this.currentDayOfWeek = this.currentDate.getDay();
+        this.currentHour = this.currentDate.getUTCHours() + 2;
+    }
+    isOpen() {
+        const weekdaysOpen = this.weekdays.indexOf(this.currentDayOfWeek) !== -1;
+        const openHours = (this.currentHour >= this.weekdayHours[0] && this.currentHour < this.weekdayHours[1]);
 
-    const dataAgora = new Date();
-    const diaSemanaAgora = dataAgora.getDay();
-    const horarioAgora = dataAgora.getHours();
-    // console.log(diaSemanaAgora, horarioAgora);
-
-    const semanaAberto = diasSemana.indexOf(diaSemanaAgora) !== -1;
-    // console.log(semanaAberto);
-    const horarioAberto = (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]);
-    // if (horarioAgora >= horarioSemana[0] && horarioAgora < horarioSemana[1]) {
-    //     console.log("aberto");
-    // }
-
-    if (semanaAberto && horarioAberto) {
-        funcionamento.classList.add("aberto");
+        return weekdaysOpen && openHours;
+    }
+    activeOpen() {
+        if (this.isOpen()) {
+            this.businessHours.classList.add(this.activeClass);
+        }
+    }
+    init() {
+        if (this.businessHours) {
+            this.operatingInformation();
+            this.currentStatus();
+            this.activeOpen();
+        }
+        return this;
     }
 };
 
-export default initOperatingHours;
+export default OperatingHours;

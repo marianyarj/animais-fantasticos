@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import DropdownMenu from "./modules/dropdown-menu.js";
 import MenuMobile from "./modules/menu-mobile.js";
-import initOperatingHours from "./modules/operating-hours.js";
+import OperatingHours from "./modules/operating-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import ScrollSmooth from "./modules/scroll-smooth.js";
 
@@ -34,5 +34,9 @@ dropdownMenu.init();
 
 const menuMobile = new MenuMobile('[data-menu="btnMobile"]', '[data-menu="list"]');
 menuMobile.init();
-initOperatingHours();
+
+const operatingHours = new OperatingHours('[data-semana]', "open");
+console.log(operatingHours)
+operatingHours.init();
+
 fetchAnimals('../../animaisapi.json', '.number-grid');
