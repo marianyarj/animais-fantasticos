@@ -18,6 +18,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-main.js.LICENSE.txt
-main.js
