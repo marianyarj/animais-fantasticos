@@ -1,7 +1,6 @@
 
 export default class ScrollSmooth {
     constructor(links, options) {
-        // const linksInternos = document.querySelectorAll('[data-menu="smooth"] a[href^="#"]');
         this.linksInternos = document.querySelectorAll(links);
         if (this.options === undefined) {
             this.options = { behavior: 'smooth', block: 'start' };

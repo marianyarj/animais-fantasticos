@@ -9,8 +9,6 @@ import OperatingHours from "./modules/operating-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import ScrollSmooth from "./modules/scroll-smooth.js";
 
-//const options = { behavior: 'smooth', block: 'start' };
-//const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]', options);
 const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
 scrollSmooth.init();
 
@@ -36,7 +34,6 @@ const menuMobile = new MenuMobile('[data-menu="btnMobile"]', '[data-menu="list"]
 menuMobile.init();
 
 const operatingHours = new OperatingHours('[data-semana]', "open");
-console.log(operatingHours)
 operatingHours.init();
 
 fetchAnimals('../../animaisapi.json', '.number-grid');
