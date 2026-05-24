@@ -91,7 +91,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
-    color: #d62828
+    color: #A31E2A
 }
 
 .animais p {
@@ -136,7 +136,7 @@ body {
 .faq-list dt {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
-    color: #d62828;
+    color: #A31E2A;
     margin: 2rem 0.5rem 0 0;
     cursor: pointer;
 }
@@ -337,7 +337,7 @@ body {
     content: "";
     width: 10px;
     height: 10px;
-    background: #d62828;
+    background: #A31E2A;
     border-radius: 50%;
     margin-left: 4px;
     border: 2px solid black;
