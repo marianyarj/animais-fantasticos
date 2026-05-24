@@ -349,3 +349,9 @@ body {
     width: 8px;
     height: 10px;
 }
+
+@media (max-width: 700px) {
+    .grid-section h1 {
+        font-size: 2rem;
+    }
+}
