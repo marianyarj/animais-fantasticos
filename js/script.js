@@ -8,6 +8,7 @@ import MenuMobile from "./modules/menu-mobile.js";
 import OperatingHours from "./modules/operating-hours.js";
 import fetchAnimals from "./modules/fetch-animals.js";
 import ScrollSmooth from "./modules/scroll-smooth.js";
+import SlideNav from "./modules/slideNav.js";
 
 const scrollSmooth = new ScrollSmooth('[data-menu="smooth"] a[href^="#"]');
 scrollSmooth.init();
@@ -37,3 +38,7 @@ const operatingHours = new OperatingHours('[data-semana]', "open");
 operatingHours.init();
 
 fetchAnimals('./animaisapi.json', '.number-grid');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
