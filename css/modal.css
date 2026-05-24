@@ -44,7 +44,7 @@
 
 .close {
     position: absolute;
-    background: #E54 url('../img/close.svg')no-repeat center center;
+    background: #d62828 url('../img/close.svg')no-repeat center center;
     top: -30px;
     right: -30px;
     width: 50px;
@@ -70,7 +70,7 @@
 
 .modal button[type="submit"] {
     display: block;
-    background: #E54;
+    background: #d62828;
     border: none;
     border-radius: 4px;
     padding: .7rem 2rem;
