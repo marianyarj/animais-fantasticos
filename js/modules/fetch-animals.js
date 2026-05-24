@@ -29,7 +29,7 @@ const fetchAnimals = (url, target) => {
     const createAnimal = (animal) => {
         const divNumeroAnimal = document.createElement('div');
         divNumeroAnimal.classList.add('number-animal');
-        divNumeroAnimal.innerHTML = `<h3>${animal.especie}</h3>
+        divNumeroAnimal.innerHTML = `<h2>${animal.especie}</h2>
                                     <span data-number>${animal.total}</span>`;
         return divNumeroAnimal;
     };

@@ -5,7 +5,7 @@
     grid-gap: 30px;
 }
 
-.number-grid h3 {
+.number-grid h2 {
     font-family: 'Playfair Display SC';
     font-size: 2rem;
     margin-bottom: .5rem;
@@ -15,7 +15,7 @@
     font-family: 'IBM Plex Mono', monospace;
     font-weight: bold;
     font-size: 1.5rem;
-    color: #E54;
+    color: #d62828;
 }
 
 @media (max-width: 700px) {
@@ -23,7 +23,7 @@
         grid-column: 1;
     }
 
-    .number-grid h3 {
+    .number-grid h2 {
         font-size: 1.5rem;
 
     }
