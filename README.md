@@ -138,7 +138,6 @@ Projeto desenvolvido com JavaScript Vanilla, focado em manipulação do DOM, con
 ### Responsividade
 - CSS Grid
 - Layout adaptado para dispositivos móveis
-(./)
 
 ![Responsive layout](./img/IPhone-Macbook-Air.webp)
 
